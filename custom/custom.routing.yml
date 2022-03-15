@@ -1,0 +1,13 @@
+custom.qr.url:
+  path: '/image-qr-generate-with-url'
+  defaults:
+    _controller: '\Drupal\custom\Controller\QRImageGeneratorController::withUrl'
+  requirements:
+    _access: 'TRUE'
+custom.admin_settings:
+  path: '/admin/config/qr-code-settings'
+  defaults:
+    _form: '\Drupal\custom\Form\QRCodeConfigurationForm'
+    _title: 'QR Code configuration'
+  requirements:
+    _permission: 'administer site configuration'
